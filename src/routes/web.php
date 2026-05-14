@@ -2,18 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::view('/', 'landing.index')->name('home');
+Route::view('/services', 'landing.services')->name('services');
+Route::view('/contact', 'landing.contact')->name('contact');
